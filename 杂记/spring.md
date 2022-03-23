@@ -92,4 +92,5 @@ singl![三级缓存](https://user-images.githubusercontent.com/49087641/15965500
 etonObjects、earlySingletonObjects、singletonFactories
 
 Spring默认是解决了setter注入的循环依赖的，构造方法循环依赖问题，是在反射创建bean时就会发生的，此时Spring是没有办法提前获取到早期单例bean的，因为早期单例bean得要经过反射创建才能获取到
+![bean加载](https://user-images.githubusercontent.com/49087641/159655287-17d33519-ace9-4b26-b6bc-74a0124db027.png)
 
