@@ -88,5 +88,9 @@ bean加载的入口：getBean()
 去除前缀中的'&'
 
 通过三级缓存解决循环依赖
-singletonObjects、earlySingletonObjects、singletonFactories
+singl![三级缓存](https://user-images.githubusercontent.com/49087641/159655003-77149902-28b5-4aa7-9c66-cd5ee8591044.png)
+etonObjects、earlySingletonObjects、singletonFactories
+
 Spring默认是解决了setter注入的循环依赖的，构造方法循环依赖问题，是在反射创建bean时就会发生的，此时Spring是没有办法提前获取到早期单例bean的，因为早期单例bean得要经过反射创建才能获取到
+![bean加载](https://user-images.githubusercontent.com/49087641/159655287-17d33519-ace9-4b26-b6bc-74a0124db027.png)
+
