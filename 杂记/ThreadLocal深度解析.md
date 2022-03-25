@@ -83,7 +83,7 @@ private void set(ThreadLocal<?> key, Object value) {
 }
 
 ```
-通过上面的源码分析我们可以知道，每个线程都拥有一个ThreadLocalMap来存储，存储的实现是Entry数组散列的方式是int i = key.threadLocalHashCode & (len-1)；可以总结一下：声明一个ThreadLocal对象，其实这个对象相当于一个代理类，实现一些方法实现线程本地化，通过ThreadLocalMap来存储，另外可以发现大部分方法都是private修饰，每个Thread方法持有一个Map；还有一个比较细节的点就是它散列进数组的时候用的是threadLocalHashCode;
+通过上面的源码分析我们可以知道，每个线程都拥有一个ThreadLocalMap来存储，存储的实现是Entry数组散列的方式是int i = key.threadLocalHashCode & (len-1)；可以总结一下：声明一个ThreadLocal对象，其实这个对象相当于一个代理类，通过一些方法实现线程本地化存储，通过ThreadLocalMap来存储，另外可以发现大部分方法都是private修饰，每个Thread方法持有一个Map；还有一个比较细节的点就是它散列进数组的时候用的是threadLocalHashCode;
 ```java
 private final int threadLocalHashCode = nextHashCode();
 
