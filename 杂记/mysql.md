@@ -13,6 +13,38 @@
 #### 数据增删改查的实现
 
 buffer pool
+redo log
+undo log
+bin log
+
+free list
+flush list
+lru list
 
 
+#### 索引的实现
+
+
+B+树
+表空间 + 数据页
+
+
+#### 并发下的事务管理
+
+快照读
+当前读
+
+mvcc + 锁机制
+read-view   undo-log链条
+
+
+
+#### sql执行计划分析：exlpain
+
+const  ref  range  index
+
+#### mysql主从
+
+bin log 
+relay log
 
